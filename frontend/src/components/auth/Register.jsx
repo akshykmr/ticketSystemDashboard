@@ -88,7 +88,7 @@ const Register = () => {
           localStorage.setItem("token", data.token);
           localStorage.setItem("role", data.user.role);
 
-          if (data.role === "user") {
+          if (data.user.role === "user") {
             setTimeout(() => {
               navigate("/tickets");
             }, 2000);

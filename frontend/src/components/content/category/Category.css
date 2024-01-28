@@ -1,0 +1,24 @@
+.cat-container {
+  font-family: "Inter", sans-serif;
+}
+.cat-heading {
+  padding: 0px 40px;
+  margin: 20px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #cecddc;
+  border-radius: 8px;
+  border: 1px solid rgb(88, 88, 250);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catcreateticket-btn {
+  border: 1px solid rgb(88, 88, 250);
+  border-radius: 8px;
+  background: #5251ea;
+  padding: 10px;
+  height: 35px;
+  color: #cecddc;
+  width: 80px;
+}

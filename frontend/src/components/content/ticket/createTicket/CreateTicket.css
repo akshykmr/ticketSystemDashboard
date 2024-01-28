@@ -1,0 +1,79 @@
+.ticket-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #232168;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #5251ea;
+}
+.heading-2{
+  color: #cecddc;
+
+}
+.backbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #cecddc;
+}
+.backbtn :hover {
+  color: #29277a;
+}
+
+.ticket-dialog.open {
+  display: block;
+}
+.ticket-dialog.close {
+  display: hidden;
+}
+
+.dialog-content {
+  width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  color: #cecddc;
+}
+
+.internalInput,
+select {
+ padding: 8px;
+ margin-bottom: 16px;
+ border: 1px solid #5251ea;
+ border-radius: 4px;
+ background-color: #29277a;
+ color: #cecddc;
+ width: 100%; /* Add this line */
+ box-sizing: border-box; /* Add this line */
+}
+
+button:hover {
+  background-color: #29277a;
+}
+
+.sub-btn {
+  border-radius: 8px;
+  display: flex;
+  justify-content: center; /* Add this line */
+  align-content: center;
+  padding: 10px;
+  height: 35px;
+  width: 80px;
+  color: #cecddc;
+  background-color: rgb(88, 88, 250);
+}
+.sub-btn:hover {
+  background-color: #29277a;
+}

@@ -1,0 +1,35 @@
+.header_h{
+    position: absolute;
+    /* transform: translate(-50%, -50%); */
+    right: 40px;
+    top: 15px;
+}
+.profile {
+  border: 1px solid #34339a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+.profileIcon {
+  display: flex;
+  font-size: 17px;
+  color: #f9f9f9;
+  opacity: 0.8;
+}
+.profileName {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  text-transform: capitalize;
+  line-height: 1;
+  border-radius: 8px;
+  color: #f9f9f9;
+  opacity: 0.8;
+}
+.none{
+    width: 20px;
+    height: 30px;
+    border: 1px solid green;
+}

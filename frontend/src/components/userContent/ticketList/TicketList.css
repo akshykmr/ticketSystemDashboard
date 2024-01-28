@@ -1,0 +1,123 @@
+/* TicketList.css */
+
+.tlist-container {
+  font-family: "Inter", sans-serif;
+}
+.tlist-heading {
+  padding: 20px 40px;
+  margin: 20px 40px 5px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #cecddc;
+  border-radius: 8px;
+  border: 1px solid rgb(88, 88, 250);
+}
+.react-datepicker__close-icon{
+  position: absolute;
+  right: 13px;
+  top: 1%;
+}
+.react-datepicker__close-icon:hover{
+background-color: transparent;
+}
+.filters {
+  padding: 20px 40px 0px 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.ticklistinpu,
+select {
+  padding: 8px;
+  border: 1px solid #5251ea;
+  border-radius: 4px;
+  background-color: #29277a;
+  color: #cecddc;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.tlistbody {
+  padding: 0px 40px;
+  font-family: "Inter", sans-serif;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.ticket-list {
+  max-width: 100%;
+
+}
+.categoryl{
+    width: 200px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1f1d58;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #3d3cb2;
+  color: #cecddc;
+}
+.ticket-item:hover {
+    background-color: #29277a;
+
+}
+
+.ticket-details {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-details img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.booking-controls {
+  display: flex;
+  align-items: center;
+}
+.tick-item{
+    display: flex;
+    gap: 70px;
+}
+.tick-iconn{
+    font-size: 40px;
+    width: 80px;
+}
+
+input {
+  width: 50px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bookbtn {
+  background-color: #5251ea;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bookbtn:hover {
+  background-color: #29277a;
+  border: 1px solid #3d3cb2;
+}

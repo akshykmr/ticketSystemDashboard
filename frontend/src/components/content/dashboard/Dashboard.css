@@ -1,0 +1,55 @@
+
+
+.card-container {
+  font-family: "Inter", sans-serif;
+}
+.heading{
+  padding: 20px 40px;
+  margin: 20px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #cecddc;
+  border-radius: 8px;
+  border: 1px solid rgb(88, 88, 250);/* Blue shade */
+
+
+}
+.carditem{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  /* margin-top: 20px; */
+ padding: 40px;
+
+}
+
+.da_card {
+  width: 330px;
+  padding: 10px;
+  height: 150px;
+  background-color: #1f1d58; 
+  border: 1px solid rgb(88, 88, 250);/* Blue shade */
+  color: #fff; /* Text color */
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.frow, .srow{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  padding-left: 20px;
+  /* border: 1px solid; */
+  gap: 10px;
+}
+
+.da_card:hover {
+  background-color: #29277a; /* Darker blue shade on hover */
+}
+
+.card-icon {
+  font-size: 36px;
+}
+

@@ -47,6 +47,7 @@ const Login = () => {
         toast.success(data.message);
         localStorage.setItem("token", data.token);
         localStorage.setItem("role", data.role);
+        localStorage.setItem("user", data.name);
         ref.current.complete();
         if (data.role === "user") {
           setTimeout(() => {

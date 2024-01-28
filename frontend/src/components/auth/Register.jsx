@@ -87,9 +87,15 @@ const Register = () => {
           ref.current.complete();
           localStorage.setItem("token", data.token);
           localStorage.setItem("role", data.user.role);
-          setTimeout(() => {
-            navigate("/home");
-          }, 2000);
+
+          if (data.role === "user") {
+            setTimeout(() => {
+              navigate("/tickets");
+            }, 2000);
+          } else
+            setTimeout(() => {
+              navigate("/home");
+            }, 2000);
         } else {
           // Handle registration failure
           console.error("Registration failed");
@@ -112,7 +118,6 @@ const Register = () => {
         <MdOutlineAirplaneTicket className="logo_container" />
         <div className="title_containerr">
           <p className="title">Create Your Account</p>
-         
         </div>
         <div className="input_containerr">
           <label className="input_labelr" htmlFor="name_field">
@@ -181,15 +186,13 @@ const Register = () => {
           >
             {showPass ? <VscEye /> : <VscEyeClosed />}
           </div>
-         
         </div>
-        {formData.password &&
-          !isStrongpassword(formData.password) && (
-            <span className="warnig_msg">
-              password must contain at least 8 characters, one uppercase letter,
-              one lowercase letter, one number, and one special character.
-            </span>
-          )}
+        {formData.password && !isStrongpassword(formData.password) && (
+          <span className="warnig_msg">
+            password must contain at least 8 characters, one uppercase letter,
+            one lowercase letter, one number, and one special character.
+          </span>
+        )}
         <button
           title="Register"
           type="submit"

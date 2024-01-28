@@ -126,6 +126,47 @@ The backend application is hosted live at [https://ticketsystem-d7ze.onrender.co
 
 Attaching few screenshots of the live application, just for an overview.
 
+- Admin Homepage \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_homepage.png)
+
+- Admin Tickets Homepage\
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_ticket_homepage.png)
+
+- Admin Tickets Creation\
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_ticket_create.png)
+
+
+
+- Admin Users Homepage\
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_user_homepage.png)
+
+- Admin Categories Homepage\
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_category_homepage.png)
+
+- Admin Categories Creation\
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/admin_category_create.png)
+
+
+
+
+---
+
+- User Signup \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/user_signup.png)
+
+- User Login \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/user_login.png)
+
+- User Tickets Homepage \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/user_tickets.png)
+
+
+- User Tickets Filtered \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/user_ticket_filter.png)
+
+- user Tickets History  \
+  ![homepage](https://github.com/akshykmr/ticketSystemDashboard/blob/master/screenshots/user_ticket_history.png)
+
 
 
 ## Contact

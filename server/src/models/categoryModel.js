@@ -7,7 +7,7 @@ const categorySchema = new mongoose.Schema({
 const Category = mongoose.model('category', categorySchema);
 
 const createDefaultCategories = async()=>{
- const categories = ['EconomyClass', 'BusinessClass', 'firstClass'];
+ const categories = ['Economy Class', 'Business Class', 'First Class'];
  for (let categoryName of categories) {
     const isExist = await Category.findOne({name: categoryName});
     if (!isExist) {

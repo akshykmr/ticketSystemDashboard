@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import CreatCat from "./createCategory/CreateCat";
 import "./Category.css";
 import { ToastContainer, toast } from "react-toastify";
+import TableRowsLoader from "../element/Loader/TableSkelaton";
 
 const Category = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const [isLoading, setIsLoading] = useState(false);
 
   const [categories, setCategories] = useState([]);
 
@@ -20,6 +22,7 @@ const Category = () => {
       });
       if (!response.ok) throw new Error("Failed to fetch tickets");
       const data = await response.json();
+      setIsLoading(true);
       setCategories(data.categories);
     } catch (error) {
       console.error("Error:", error);
@@ -38,15 +41,14 @@ const Category = () => {
   };
 
   const handleCreateCat = (ticketData) => {
-    if(ticketData.type === 'warn'){
+    if (ticketData.type === "warn") {
       toast.warn(ticketData.msg);
-      } else if (ticketData.type === 'success'){
-        fetchCat();
-      }
+    } else if (ticketData.type === "success") {
+      fetchCat();
+    }
   };
 
   const headers = ["Serial No", "Name"];
-
 
   return (
     <div className="cat-container">
@@ -73,12 +75,16 @@ const Category = () => {
             </tr>
           </thead>
           <tbody>
-            {categories.map((category, index) => (
-              <tr key={category.id}>
-                <td>{index + 1}</td>
-                <td>{category.name}</td>
-              </tr>
-            ))}
+            {!isLoading ? (
+              <TableRowsLoader rowsNum={5} columnsNum={headers.length} />
+            ) : (
+              categories.map((category, index) => (
+                <tr key={category.id}>
+                  <td>{index + 1}</td>
+                  <td>{category.name}</td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>

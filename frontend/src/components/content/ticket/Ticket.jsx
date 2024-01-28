@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Ticket.css";
 import CreateTicket from "./createTicket/CreateTicket";
 import { ToastContainer, toast } from "react-toastify";
-
+import TableRowsLoader from "../element/Loader/TableSkelaton";
 
 const Ticket = () => {
   const [tickets, setTickets] = useState([]);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchTickets = async () => {
     try {
@@ -19,7 +20,8 @@ const Ticket = () => {
       });
       if (!response.ok) throw new Error("Failed to fetch tickets");
       const data = await response.json();
-      setTickets(data.tickets); 
+      setIsLoading(true);
+      setTickets(data.tickets);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -28,7 +30,6 @@ const Ticket = () => {
   useEffect(() => {
     fetchTickets();
   }, []);
-
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -43,7 +44,7 @@ const Ticket = () => {
         });
         if (!response.ok) throw new Error("Failed to fetch tickets");
         const data = await response.json();
-        setCategories(data.categories); 
+        setCategories(data.categories);
       } catch (error) {
         console.error("Error:", error);
       }
@@ -63,15 +64,22 @@ const Ticket = () => {
   };
 
   const handleCreateTicket = (ticketData) => {
-    if(ticketData.type === 'warn'){
-    toast.warn(ticketData.msg);
-    } else if (ticketData.type === 'success'){
+    if (ticketData.type === "warn") {
+      toast.warn(ticketData.msg);
+    } else if (ticketData.type === "success") {
       fetchTickets();
     }
   };
 
-  const headers = ["Serial No", "Category", "Price", "Date", "Availability","Occupancy","Status"];
-
+  const headers = [
+    "Serial No",
+    "Category",
+    "Price",
+    "Date",
+    "Availability",
+    "Occupancy",
+    "Status",
+  ];
 
   return (
     <div className="ticket-container">
@@ -98,17 +106,21 @@ const Ticket = () => {
             </tr>
           </thead>
           <tbody>
-            {tickets.map((ticket, index) => (
-              <tr key={ticket.id}>
-                <td>{index + 1}</td>
-                <td>{ticket?.category?.name}</td>
-                <td>{ticket?.price}</td>
-                <td>{ticket?.date}</td>
-                <td>{ticket?.availability}</td>
-                <td>{ticket?.occupancy}</td>
-                <td>{ticket?.status}</td>
-              </tr>
-            ))}
+            {!isLoading ? (
+              <TableRowsLoader rowsNum={10} columnsNum={headers.length} />
+            ) : (
+              tickets.map((ticket, index) => (
+                <tr key={ticket.id}>
+                  <td>{index + 1}</td>
+                  <td>{ticket?.category?.name}</td>
+                  <td>{ticket?.price}</td>
+                  <td>{ticket?.date}</td>
+                  <td>{ticket?.availability}</td>
+                  <td>{ticket?.occupancy}</td>
+                  <td>{ticket?.status}</td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>

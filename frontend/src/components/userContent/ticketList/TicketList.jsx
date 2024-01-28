@@ -6,10 +6,13 @@ import { LiaPagerSolid } from "react-icons/lia";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingBar from "react-top-loading-bar";
+import ListSkelaton from '../../content/element//Loader/ListSkelaton'
+
 const TicketList = () => {
   const [tickets, setTickets] = useState([]);
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const ref = useRef(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchTickets = async () => {
     try {
@@ -23,6 +26,7 @@ const TicketList = () => {
       if (!response.ok) throw new Error("Failed to fetch tickets");
       const data = await response.json();
       setTickets(data.tickets);
+      setIsLoading(true);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -141,8 +145,10 @@ const TicketList = () => {
       <div className="tlistbody">
         <div className="ticket-list">
           <ul>
-
-            {filteredTickets.map((ticket) => (
+          {!isLoading ? (
+              <ListSkelaton numRows={1} />
+            ) : (
+            filteredTickets.map((ticket) => (
               <li key={ticket._id} className="ticket-item">
                 <div className="ticket-details">
                   <LiaPagerSolid className="tick-iconn" />
@@ -165,7 +171,9 @@ const TicketList = () => {
                   </button>
                 </div>
               </li>
-            ))}
+            ))
+            )}
+
           </ul>
         </div>
       </div>

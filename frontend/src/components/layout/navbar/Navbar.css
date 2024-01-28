@@ -94,7 +94,7 @@ button {
 }
 
 .sidebar-button:hover {
-  background: rgb(0 0 0 / 30%);
+  /* background: rgb(0 0 0 / 30%); */
   opacity: 1;
   border: 1px solid;
 }

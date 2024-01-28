@@ -39,6 +39,7 @@
   /* border: 2px solid rgb(29, 245, 13); */
   height: calc(100vh - 72px);
   background: #29277a;
+  z-index: 100;
 }
 
 .childrenn.open {

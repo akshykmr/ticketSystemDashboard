@@ -13,19 +13,22 @@
 .ticketbody {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-family: "Inter", sans-serif;
-  padding: 20px 40px;
-  gap: 20px;
   overflow-y: auto;
   max-height: 500px;
+  gap: 20px;
+
 }
 
 .cardWrap {
-  width: calc(50% - 40px);
+  /* width: calc(50% - 40px); */
   color: #fff;
   font-family: sans-serif;
   box-sizing: border-box;
+}
+.bodyd{
+  padding: 30px 50px;
 }
 
 .card {
@@ -44,6 +47,22 @@
   border-radius: 8px;
 }
 
+.cardd {
+  background: linear-gradient(
+    to bottom,
+    #1e1c5900 0%,
+    #1e1c5900 26%,
+    #23216800 26%,
+    #23216800 100%
+  );
+  height: 12em;
+  float: left;
+  position: relative;
+  padding: 1em;
+  border: 1px solid #32309200;
+  border-radius: 8px;
+}
+
 .cardLeft {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -56,6 +75,7 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
 .cardRight:before,
 .cardRight:after {
   content: "";
@@ -67,6 +87,8 @@
   border-radius: 50%;
   left: -0.5em;
 }
+
+
 .cardRight:before {
   top: -0.4em;
 }
@@ -182,4 +204,42 @@ h1 span {
     51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434,
     64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434,
     74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
+}
+
+
+
+
+
+
+.cardLeftt {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 21em;
+}
+
+.cardRightt {
+  width: 6.5em;
+  border-left: 0.18em dashed #ffffff00;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cardRightt:before,
+.cardRightt:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  background: #ffffff00;
+  border-radius: 50%;
+  left: -0.5em;
+}
+
+
+.cardRightt:before {
+  top: -0.4em;
+}
+.cardRightt:after {
+  bottom: -0.4em;
 }

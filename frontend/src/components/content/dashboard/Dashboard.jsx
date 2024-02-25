@@ -44,8 +44,9 @@ const Dashboard = () => {
   return (
     <div className="card-container">
       <div className="heading">Dashboard</div>
-      <div className="carditem">
-        <div className="da_card">
+      <div className="cardItem">
+
+        <div className="da_card da_card1">
           <div className="frow">
             <FaUsersBetweenLines className="card-icon" />
             <h2>Users</h2>
@@ -56,7 +57,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="da_card">
+        <div className="da_card da_card2">
           <div className="frow">
             <MdCategory className="card-icon" />
             <h2>Categories</h2>
@@ -67,7 +68,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="da_card">
+        <div className="da_card  da_card3">
           <div className="frow">
             <PiTicketFill className="card-icon" />
             <h2>Tickets</h2>

@@ -4,18 +4,25 @@
 
 body {
   margin: 0;
-  background: #29277a;
+  /* background: #29277a; */
 }
-.mainlogo {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 900;
+.site-logo {
+  color: rgb(42, 53, 71);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.334rem;
   font-family: "Inter", sans-serif;
-  color: #cecddc;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar.open :is(.site-logo) {
+  opacity: 1;
 }
 
 button {
-  background: transparent;
+  /* background: transparent; */
   border: 0;
   padding: 0;
   cursor: pointer;
@@ -28,12 +35,14 @@ button {
   left: 0;
   width: 60px;
   height: 100%;
-  background: rgb(0 0 0 / 15%);
+  /* background: rgb(0 0 0 / 15%); */
   transition: width 0.4s;
+  border-right: 1px solid rgb(209, 209, 209);
 }
 
 .sidebar.open {
   width: 260px;
+  transition: 0.3s;
 }
 
 .sidebar-inner {
@@ -46,26 +55,30 @@ button {
 .sidebar-header {
   display: flex;
   align-items: center;
-  height: 72px;
-  background: rgb(0 0 0 / 15%);
+  height: 92px;
+  /* background: rgb(0 0 0 / 15%); */
 }
 
 .sidebar-burger {
   width: 60px;
-  height: 72px;
+  height: 92px;
   display: grid;
   place-items: center;
-  color: #f9f9f9;
+  color: #000000;
   font-size: 22px;
+  background: none;
   opacity: 1;
+
 }
 
 .sidebar-burger:hover {
-  color: rgb(108, 99, 99);
-  background-color: #28277a00;
+  color: rgb(0, 0, 0);
+  background: none;
   /* height: 20px; */
   /* width: 20px; */
   border-radius: 50%;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 
 .sidebar-logo {
@@ -75,32 +88,89 @@ button {
 .sidebar-menu {
   display: grid;
   padding: 10px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .sidebar-button {
   display: flex;
   gap: 16px;
   align-items: center;
-  height: 56px;
-  width: 100%;
-  font-family: "Inter", sans-serif;
-  font-size: 17px;
+  height: 50px;
+  /* width: 100%; */
+  color: rgb(42, 53, 71);
+
   text-transform: capitalize;
-  line-height: 1;
   padding: 0 10px;
   border-radius: 8px;
-  color: #f9f9f9;
   opacity: 0.8;
+  background: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.334rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.sidebar-button.open {
+  transition: 0.3s;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 50px;
+  /* width: 100%; */
+  text-transform: capitalize;
+  padding: 0 10px;
+  border-radius: 8px;
+  opacity: 0.8;
+  color: white;
+  background-color: rgb(93, 135, 255);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.334rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .sidebar-button:hover {
-  /* background: rgb(0 0 0 / 30%); */
+  background: none;
+}
+
+.sidebar-icon.active {
+  color: rgb(93, 135, 255);
   opacity: 1;
-  border: 1px solid;
+  transition: 0.3s;
+}
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  color: rgb(42, 53, 71);
+  opacity: 1;
+
+}
+.sidebar-icon.open {
+  display: flex;
+  align-items: center;
+  color: white;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+sidebar-icon:hover {
+  background: none;
+}
+
+.sidebar.open .sidebar-button:hover {
+  opacity: 1;
+  background-color: rgb(236, 242, 255);
+  color: rgb(93, 135, 255);
+  transition: 0.3s;
+}
+
+.sidebar.open .sidebar-button:hover .sidebar-icon {
+  color: rgb(93, 135, 255);
 }
 
 .sidebar-button:hover > span {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .sidebar-logo,
@@ -117,34 +187,58 @@ button {
   width: 24px;
   height: 24px;
 }
-
+/* 
 .sidebar-button > span {
   opacity: 0.5;
-}
-
+} */
 
 .logout-menu {
   position: fixed;
   bottom: 0;
   width: 240px;
- }
-
-.sidebar-button.open {
   margin-left: 10px;
+}
+
+.logout-button {
   display: flex;
   gap: 16px;
   align-items: center;
   height: 56px;
-  width: 100%;
   font-family: "Inter", sans-serif;
   font-size: 17px;
   text-transform: capitalize;
   line-height: 1;
   padding: 0 10px;
   border-radius: 8px;
-  color: #f9f9f9;
-  opacity: 0.8;
-  background: rgb(0 0 0 / 30%);
+  color: #ff0000;
   opacity: 1;
-  border: 1px solid;
+  margin-bottom: 20px;
+  background: none;
+}
+.logout-button:hover {
+  background: none;
+  color: #5d87ff;
+  /* margin-bottom: 10px; */
+}
+
+.logout-button.open {
+  background-color: rgb(232, 247, 255);
+  width: 100%;
+  color: #5d87ff;
+}
+
+.logout-button.open:hover {
+  background: rgb(93, 135, 255);
+  width: 100%;
+  color: white;
+}
+
+.logout-logo,
+.logout-button p {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar.open :is(.logout-button p, .logout-logo) {
+  opacity: 1;
 }

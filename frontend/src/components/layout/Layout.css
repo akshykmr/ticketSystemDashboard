@@ -5,8 +5,8 @@
 .layoutHeder {
   display: flex;
   align-items: center;
-  height: 72px;
-  background: rgb(0 0 0 / 15%);
+  height: 92px;
+  /* background: rgb(0 0 0 / 15%); */
   width: 100vw ;
   position: relative;
 }
@@ -27,18 +27,18 @@
 
 .sideBar.open {
   width: 260px;
-  height: calc(100vh - 72px);
+  height: calc(100vh - 92px);
 }
 
 .sideBar.close {
   width: 60px;
-  height: calc(100vh - 72px);
+  height: calc(100vh - 92px);
 }
 
 .childrenn {
   /* border: 2px solid rgb(29, 245, 13); */
-  height: calc(100vh - 72px);
-  background: #29277a;
+  height: calc(100vh - 92px);
+  /* background: #29277a; */
   z-index: 100;
 }
 

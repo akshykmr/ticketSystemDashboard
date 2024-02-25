@@ -91,7 +91,8 @@ const TicketDialog = ({ isOpen, onClose, categories, onSubmit }) => {
   };
 
   return (
-    <div className={`ticket-dialog ${isOpen ? "open" : ""}`}>
+    <div className={`dialog-container ${isOpen ? "open" : ""}`}>
+    <div className={`ticket-dialog `}>
       <LoadingBar color="#f11946" ref={ref} />
 
       <div className="backbtn" onClick={() => onClose()}>
@@ -146,6 +147,7 @@ const TicketDialog = ({ isOpen, onClose, categories, onSubmit }) => {
         </button>
       </div>
      
+    </div>
     </div>
   );
 };

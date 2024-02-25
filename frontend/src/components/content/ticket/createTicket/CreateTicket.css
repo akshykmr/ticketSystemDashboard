@@ -1,17 +1,30 @@
-.ticket-dialog {
+.dialog-container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #64646480;
   display: none;
+
+}
+.ticket-dialog {
+  /* display: none; */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #232168;
+  background: linear-gradient(145deg, #f0f0f0, #ececec);
+  box-shadow:  2px 2px 5px #979797,
+               -5px -5px 5px #ffffff;
   padding: 50px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #5251ea;
+  border: 1px solid #d9d9d9;
 }
 .heading-2{
-  color: #cecddc;
+  color: rgb(42, 53, 71);
+
 
 }
 .backbtn {
@@ -20,16 +33,17 @@
   right: 10px;
   font-size: 22px;
   cursor: pointer;
-  color: #cecddc;
+  color: rgb(42, 53, 71);
+
 }
 .backbtn :hover {
   color: #29277a;
 }
 
-.ticket-dialog.open {
+.dialog-container.open {
   display: block;
 }
-.ticket-dialog.close {
+.dialog-container.close {
   display: hidden;
 }
 
@@ -44,36 +58,43 @@ label {
   flex-direction: column;
   gap: 5px;
   font-size: 14px;
-  color: #cecddc;
+  color: rgb(42, 53, 71);
+  font-family: "Plus Jakarta Sans", sans-serif;
+
 }
 
 .internalInput,
 select {
  padding: 8px;
  margin-bottom: 16px;
- border: 1px solid #5251ea;
+ border: 1px solid #c8c8c8;
  border-radius: 4px;
- background-color: #29277a;
- color: #cecddc;
+ background-color: #ededed;
+ color: rgb(42, 53, 71);
  width: 100%; /* Add this line */
  box-sizing: border-box; /* Add this line */
 }
 
 button:hover {
-  background-color: #29277a;
+  background-color: #ededed;
 }
 
 .sub-btn {
   border-radius: 8px;
-  display: flex;
-  justify-content: center; /* Add this line */
-  align-content: center;
+  background: rgb(93, 135, 255);
+  opacity: 1;
   padding: 10px;
   height: 35px;
+  color: white;
   width: 80px;
-  color: #cecddc;
-  background-color: rgb(88, 88, 250);
+   box-shadow: 3px 3px 1px #bebebe,
+  -1px -2px 1px #ffffff;
 }
 .sub-btn:hover {
-  background-color: #29277a;
+  background: rgb(93, 135, 255);
+}
+
+.sub-btn:active{
+  box-shadow: 1px 1px 1px #bebebe,
+  1px 2px 1px #ffffff;
 }

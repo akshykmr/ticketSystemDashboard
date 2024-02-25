@@ -5,12 +5,12 @@
 }
 .tlist-heading {
   padding: 20px 40px;
-  margin: 20px 40px 5px 40px;
+  margin: 19px 40px;
   font-size: 22px;
   font-weight: 700;
-  color: #cecddc;
+  color: rgb(42, 53, 71);
   border-radius: 8px;
-  border: 1px solid rgb(88, 88, 250);
+  background-color: rgb(232, 247, 255);
 }
 .react-datepicker__close-icon{
   position: absolute;
@@ -30,10 +30,10 @@ background-color: transparent;
 .ticklistinpu,
 select {
   padding: 8px;
-  border: 1px solid #5251ea;
+  border: 1px solid #c8c8c8;
   border-radius: 4px;
-  background-color: #29277a;
-  color: #cecddc;
+  background-color: #ededed;
+  color: rgb(42, 53, 71);
   width: 300px;
   box-sizing: border-box;
 }
@@ -64,14 +64,16 @@ ul {
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #1f1d58;
+  /* background-color: #1f1d58; */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #3d3cb2;
-  color: #cecddc;
+  /* border: 1px solid #3d3cb2; */
+  color: rgb(121, 128, 140);
+
 }
 .ticket-item:hover {
-    background-color: #29277a;
+  background-color: rgb(232, 247, 255);
+  color: rgb(42, 53, 71);
 
 }
 
@@ -100,24 +102,38 @@ ul {
     width: 80px;
 }
 
-input {
+input{
   width: 50px;
   margin-right: 10px;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: white !important;
 }
 
+select {
+  background: white;
+}
 .bookbtn {
-  background-color: #5251ea;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  background: rgb(93, 135, 255);
+  opacity: 1;
+  padding: 10px;
+  height: 35px;
+  color: white;
+  width: 80px;
+   box-shadow: 3px 3px 1px #bebebe,
+  -1px -2px 1px #ffffff;
   cursor: pointer;
 }
 
 .bookbtn:hover {
-  background-color: #29277a;
-  border: 1px solid #3d3cb2;
+  box-shadow: 3px 3px 1px #bebebe,
+  -1px -2px 1px #ffffff;
+  background: rgb(93, 135, 255);
+
+}
+.bookbtn:active{
+  box-shadow: 1px 1px 1px #bebebe,
+  1px 2px 1px #ffffff;
 }

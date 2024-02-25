@@ -1,22 +1,23 @@
-.header_h{
-    position: absolute;
-    /* transform: translate(-50%, -50%); */
-    right: 40px;
-    top: 15px;
+.header_h {
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  right: 40px;
+  top: 15px;
 }
 .profile {
-  border: 1px solid #34339a;
+  /* border: 1px solid rgb(42, 53, 71); */
   border-radius: 10px;
   display: flex;
   align-items: center;
   align-content: center;
   padding: 10px;
   gap: 10px;
+  background: rgb(253, 237, 232);
 }
 .profileIcon {
   display: flex;
   font-size: 17px;
-  color: #f9f9f9;
+  color: rgb(250, 143, 115);
   opacity: 0.8;
 }
 .profileName {
@@ -25,11 +26,7 @@
   text-transform: capitalize;
   line-height: 1;
   border-radius: 8px;
-  color: #f9f9f9;
+  color: rgb(250, 143, 115);
   opacity: 0.8;
 }
-.none{
-    width: 20px;
-    height: 30px;
-    border: 1px solid green;
-}
+

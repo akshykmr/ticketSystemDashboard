@@ -3,12 +3,12 @@
 }
 .ticket-heading {
   padding: 20px 40px;
-  margin: 20px 40px;
+  margin: 19px 40px;
   font-size: 22px;
   font-weight: 700;
-  color: #cecddc;
+  color: rgb(42, 53, 71);
   border-radius: 8px;
-  border: 1px solid rgb(88, 88, 250);
+  background-color: rgb(232, 247, 255);
 }
 .ticketbody {
   display: flex;
@@ -18,12 +18,13 @@
   overflow-y: auto;
   max-height: 500px;
   gap: 20px;
+  
 
 }
 
 .cardWrap {
   /* width: calc(50% - 40px); */
-  color: #fff;
+  background-color: rgb(230, 255, 250);
   font-family: sans-serif;
   box-sizing: border-box;
 }
@@ -32,19 +33,15 @@
 }
 
 .card {
-  background: linear-gradient(
-    to bottom,
-    #1e1c59 0%,
-    #1e1c59 26%,
-    #232168 26%,
-    #232168 100%
-  );
+  background-color: rgb(230, 255, 250);
   height: 12em;
   float: left;
   position: relative;
   padding: 1em;
-  border: 1px solid #313092;
+  border: 1px solid #c4c4c4;
   border-radius: 8px;
+  box-shadow: 3px 3px 3px #bebebe,
+  -1px -2px 1px #ffffff;
 }
 
 .cardd {
@@ -116,7 +113,8 @@ h1 span {
 .seat h2,
 .time h2 {
   font-size: 0.9em;
-  color: #525252;
+  color: rgb(19, 222, 185);
+
   margin: 0;
 }
 .title span,
@@ -124,7 +122,7 @@ h1 span {
 .seat span,
 .time span {
   font-size: 0.7em;
-  color: #a2aeae;
+  color: rgb(14, 174, 145);
 }
 
 .title {
@@ -149,7 +147,7 @@ h1 span {
   position: relative;
   width: 2em;
   height: 1.5em;
-  background: #313092;
+  background: rgb(14, 174, 145);
   margin: 0 auto;
   border-radius: 1em/0.6em;
   z-index: 1;
@@ -183,13 +181,13 @@ h1 span {
   text-transform: uppercase;
 }
 .number h3 {
-  color: #c9c8d9;
+  color: rgb(14, 174, 145);
   margin: 0.9em 0 0 0;
   font-size: 2.5em;
 }
 .number span {
   display: block;
-  color: #a2aeae;
+  color: rgb(14, 174, 145);
 }
 
 .barcode {
@@ -202,7 +200,7 @@ h1 span {
     30px 0 0 1px #343434, 35px 0 0 1px #343434, 37px 0 0 1px #343434,
     41px 0 0 1px #343434, 44px 0 0 1px #343434, 47px 0 0 1px #343434,
     51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434,
-    64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434,
+    64px 0 0 1px #343434, 68px 0 0 1px #343434, 92px 0 0 1px #343434,
     74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
 }
 

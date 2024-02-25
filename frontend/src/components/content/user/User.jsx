@@ -87,7 +87,7 @@ const User = () => {
     <div className="user-container">
       <LoadingBar color="#f11946" ref={ref} />
       <div className="user-heading">User</div>
-      <div className="tablebody">
+      <div className="tableBody">
         <table className="user-table">
           <thead>
             <tr>

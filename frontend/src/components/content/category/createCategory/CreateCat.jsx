@@ -65,7 +65,9 @@ const CatDialog = ({ isOpen, onClose, onSubmit }) => {
   };
 
   return (
-    <div className={`ticket-dialog ${isOpen ? "open" : ""}`}>
+    <div className={`dialog-container ${isOpen ? "open" : ""}`}>
+    <div className={`ticket-dialog `}>
+
       <LoadingBar color="#f11946" ref={ref} />
       <div className="backbtn" onClick={() => onClose()}>
         <RxCrossCircled />
@@ -85,6 +87,7 @@ const CatDialog = ({ isOpen, onClose, onSubmit }) => {
           Submit
         </button>
       </div>
+    </div>
     </div>
   );
 };

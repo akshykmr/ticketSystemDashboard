@@ -1,41 +1,52 @@
-
-
 .card-container {
   font-family: "Inter", sans-serif;
 }
-.heading{
+.heading {
   padding: 20px 40px;
-  margin: 20px 40px;
+  margin: 19px 40px;
   font-size: 22px;
   font-weight: 700;
-  color: #cecddc;
+  color: rgb(42, 53, 71);
   border-radius: 8px;
-  border: 1px solid rgb(88, 88, 250);/* Blue shade */
-
-
+  background-color: rgb(232, 247, 255);
 }
-.carditem{
+.cardItem {
   display: flex;
   justify-content: space-between;
   font-family: "Inter", sans-serif;
   /* margin-top: 20px; */
- padding: 40px;
-
+  padding: 40px;
 }
 
 .da_card {
   width: 330px;
   padding: 10px;
   height: 150px;
-  background-color: #1f1d58; 
-  border: 1px solid rgb(88, 88, 250);/* Blue shade */
-  color: #fff; /* Text color */
-  border-radius: 8px;
+  /* color: #8b8b8b; */
   text-align: center;
   transition: background-color 0.3s ease; /* Hover effect */
+  border-radius: 21px;
+  /* background: #e0e0e0; */
+  box-shadow: 3px 3px 3px #bebebe,
+  -1px -2px 1px #ffffff;
 }
 
-.frow, .srow{
+.da_card.da_card1 {
+  background-color: rgb(236,  242,  255); 
+  color: rgb(93, 135, 255);
+}
+
+.da_card.da_card2 {
+  background-color: rgb(254,  245,  229); 
+  color: rgb(255, 174, 31);
+}
+
+.da_card.da_card3 {
+  background-color: rgb(230, 255, 250);
+  color: rgb(19, 222, 185);
+}
+.frow,
+.srow {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -46,10 +57,10 @@
 }
 
 .da_card:hover {
-  background-color: #29277a; /* Darker blue shade on hover */
+  background: linear-gradient(145deg, #f0f0f0, #ebebebae);
+  box-shadow:  2px 2px 5px #979797,
+               -5px -5px 5px #ffffff;
 }
-
 .card-icon {
   font-size: 36px;
 }
-

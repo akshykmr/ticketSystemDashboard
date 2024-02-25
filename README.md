@@ -172,4 +172,4 @@ Attaching few screenshots of the live application, just for an overview.
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/akshykmr/)
-- [Gmail](mailto:akshykmr@gmail.com)
+- [Gmail](mailto:akshykmr70@gmail.com)

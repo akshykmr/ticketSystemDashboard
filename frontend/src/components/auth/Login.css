@@ -215,3 +215,9 @@
   background-color: #e8e8e8;
 }
 
+.testaccount{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+

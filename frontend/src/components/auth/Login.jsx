@@ -26,9 +26,9 @@ const Login = () => {
     });
   };
 
-  const handleSuperAdminLogin = async(e) =>{
+  const handleSuperAdminLogin = async(crendials) =>{
     ref.current.continuousStart();
-    e.preventDefault();
+    // e.preventDefault();
     try {
       const response = await fetch(`${BASE_URL}/user/login`, {
         method: "POST",
@@ -36,10 +36,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
 
-        body: JSON.stringify({
-          userId: "superadmin@gmail.com",
-          password: "SuperAdmin@123",
-        }),
+        body: JSON.stringify(crendials),
       });
       const data = await response.json();
       if (data.success === true) {
@@ -221,14 +218,30 @@ const Login = () => {
           <span>Or</span>
           <hr className="line" />
         </div>
+        <span className="testaccount">
         <button
           title="Sign In"
           type="submit"
           className="sign-in_ggl"
-          onClick={handleSuperAdminLogin}
+          onClick={()=>handleSuperAdminLogin({
+            userId: "superadmin@gmail.com",
+            password: "SuperAdmin@123",
+          })}
         >
-          <span>Click Here to get Super Admin Access</span>
+          <span>Test Admin</span>
         </button>
+        <button
+          title="Sign In"
+          type="submit"
+          className="sign-in_ggl"
+          onClick={()=>handleSuperAdminLogin({
+            userId: "john@gmail.com",
+            password: "John@123",
+          })}
+        >
+          <span>Test User</span>
+        </button>
+        </span>
 
 
 
